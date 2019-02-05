@@ -26,7 +26,7 @@ auth     optional  pam_gnupg.so
 session  optional  pam_gnupg.so
 
 %prep
-%autosetup --n %{name}-%{version}-%{date} -p1
+%autosetup -n %{name}-%{version}-%{date} -p1
 
 %build
 ./autogen.sh
