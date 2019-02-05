@@ -39,4 +39,4 @@ session  optional  pam_gnupg.so
 
 %files
 %doc README.md
-/%{_lib}/security/pam-gnupg.so
+/%{_lib}/security/pam_gnupg.so
