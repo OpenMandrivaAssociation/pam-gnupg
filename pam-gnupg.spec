@@ -31,8 +31,8 @@ session  optional  pam_gnupg.so
 %build
 ./autogen.sh
 
-%configure
-%make_build --with-moduledir=/%{_lib}/security
+%configure --with-moduledir=/%{_lib}/security
+%make_build
 
 %install
 %make_install
