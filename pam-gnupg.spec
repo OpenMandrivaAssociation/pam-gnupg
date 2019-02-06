@@ -26,16 +26,17 @@ auth     optional  pam_gnupg.so
 session  optional  pam_gnupg.so
 
 %prep
-%autosetup -n %{name}-%{version}-%{date} -p1
+%setup -qn %{name}-%{version}-%{date}
+%apply_patches
 
 %build
 ./autogen.sh
 
 %configure --with-moduledir=/%{_lib}/security
-%make_build
+%make
 
 %install
-%make_install
+%makeinstall_std
 
 %files
 %doc README.md
