@@ -37,4 +37,5 @@ session  optional  pam_gnupg.so
 
 %files
 %doc README.md
+%{_libexecdir}/pam_gnupg_helper
 /%{_lib}/security/pam_gnupg.so
