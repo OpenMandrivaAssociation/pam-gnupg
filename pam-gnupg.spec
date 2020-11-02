@@ -6,7 +6,7 @@ License:	MIT
 Group:		System/Libraries
 URL:		https://github.com/cruegge/pam-gnupg
 #git archive --format=tar --prefix=pam-gnupg-0-$(date +%Y%m%d)/ HEAD | xz -vf > pam-gnupg-0-$(date +%Y%m%d).tar.xz
-Source0:	https://github.com/cruegge/pam-gnupg/release/archive/%{name}-%{version}-%{date}.tar.gz
+Source0:	https://github.com/cruegge/pam-gnupg/release/archive/%{name}-%{version}.tar.gz
 BuildRequires:	pam-devel
 Requires:	pam
 Requires:	gnupg
