@@ -1,14 +1,12 @@
-%define date 20190205
-
 Summary:	Unlock GnuPG keys on login
 Name:		pam-gnupg
-Version:	0
-Release:	0.%{date}.1
+Version:	0.2
+Release:	1
 License:	MIT
 Group:		System/Libraries
 URL:		https://github.com/cruegge/pam-gnupg
 #git archive --format=tar --prefix=pam-gnupg-0-$(date +%Y%m%d)/ HEAD | xz -vf > pam-gnupg-0-$(date +%Y%m%d).tar.xz
-Source0:	https://github.com/cruegge/pam-gnupg/release/archive/%{name}-%{version}-%{date}.tar.xz
+Source0:	https://github.com/cruegge/pam-gnupg/release/archive/%{name}-%{version}-%{date}.tar.gz
 BuildRequires:	pam-devel
 Requires:	pam
 Requires:	gnupg
@@ -26,7 +24,7 @@ auth     optional  pam_gnupg.so
 session  optional  pam_gnupg.so
 
 %prep
-%autosetup -n %{name}-%{version}-%{date} -p1
+%autosetup -p1
 
 %build
 ./autogen.sh
