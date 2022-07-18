@@ -1,6 +1,6 @@
 Summary:	Unlock GnuPG keys on login
 Name:		pam-gnupg
-Version:	0.2
+Version:	0.4
 Release:	1
 License:	MIT
 Group:		System/Libraries
@@ -29,7 +29,7 @@ session  optional  pam_gnupg.so
 %build
 ./autogen.sh
 
-%configure --with-moduledir=/%{_lib}/security
+%configure --with-moduledir=%{_libdir}/security
 %make_build
 
 %install
@@ -38,4 +38,4 @@ session  optional  pam_gnupg.so
 %files
 %doc README.md
 %{_libexecdir}/pam_gnupg_helper
-/%{_lib}/security/pam_gnupg.so
+%{_libdir}/security/pam_gnupg.so
