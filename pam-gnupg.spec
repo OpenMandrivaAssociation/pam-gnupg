@@ -1,7 +1,7 @@
 Summary:	Unlock GnuPG keys on login
 Name:		pam-gnupg
 Version:	0.4
-Release:	1
+Release:	2
 License:	MIT
 Group:		System/Libraries
 URL:		https://github.com/cruegge/pam-gnupg
